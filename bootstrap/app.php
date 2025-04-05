@@ -75,6 +75,9 @@ $app->configure('app');
     App\Http\Middleware\AuthenticateAccess::class,
  ]);
 
+ $app->configure('database');
+
+
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);

@@ -13,6 +13,10 @@
 |
 */
 
+$app->get('/test-db', function () use ($app) {
+    $results = app('db')->select("SELECT DATABASE()");
+    return response()->json($results);
+});
 
 
 $router->get('/', function () use ($router) {
