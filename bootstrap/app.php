@@ -71,24 +71,7 @@ $app->configure('app');
 |
 */
 
-require_once __DIR__.'/../vendor/autoload.php';
 
-$app = new Laravel\Lumen\Application(
-    dirname(__DIR__)
-);
-
-// Optional: Enable Facades, Eloquent, etc.
-// $app->withFacades();
-// $app->withEloquent();
-
-// Load routes
-$app->router->group([
-    'namespace' => 'App\Http\Controllers',
-], function ($router) {
-    require __DIR__.'/../routes/web.php';
-});
-
-return $app; // ✅ MUST return $app
 
  $app->middleware([
     App\Http\Middleware\AuthenticateAccess::class,
